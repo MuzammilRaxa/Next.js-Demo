@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const TodoForm = () => {
+const TodoForm = ({ addTodo }) => {
+    const [text, setText] = useState('')
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (!text) return
+        addTodo(text)
+        setText('')
+    }
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <input
                 type='text'
                 value={text}
