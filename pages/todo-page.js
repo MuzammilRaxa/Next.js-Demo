@@ -21,8 +21,8 @@ const TodoPage = () => {
 
     return (
         <div>
-            <TodoForm />
-            <TodoList todos={todos} addTodo={addTodo} deletTodo={deletTodo} updateTodo={updateTodo} />
+            <TodoForm  addTodo={addTodo} />
+            <TodoList todos={todos} deletTodo={deletTodo} updateTodo={updateTodo} />
         </div>
     )
 }
