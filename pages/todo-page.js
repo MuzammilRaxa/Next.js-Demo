@@ -20,8 +20,8 @@ const TodoPage = () => {
     };
 
     return (
-        <div>
-            <TodoForm  addTodo={addTodo} />
+        <div className=''>
+            <TodoForm addTodo={addTodo} />
             <TodoList todos={todos} deletTodo={deletTodo} updateTodo={updateTodo} />
         </div>
     )

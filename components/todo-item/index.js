@@ -20,7 +20,7 @@ const TodoItem = ({ deletTodo, todo, updateTodo }) => {
     };
 
     return (
-        <li key={todo.id}>
+        <li key={todo.id} className='flex justify-between'>
             {editing ? (
                 <>
                     <input
@@ -34,8 +34,8 @@ const TodoItem = ({ deletTodo, todo, updateTodo }) => {
             ) : (
                 <>
                     {todo.text}
-                    <button onClick={handleEdit}>Edit</button>
-                    <button onClick={() => deletTodo(todo.id)}>Delete</button>
+                    <button className='border rounded-md w-16' onClick={handleEdit}>Edit</button>
+                    <button className='border rounded-md w-16' onClick={() => deletTodo(todo.id)}>Delete</button>
                 </>
             )}
         </li>
